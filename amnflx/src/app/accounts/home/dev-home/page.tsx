@@ -1,3 +1,4 @@
+import { bebas_nue } from "@/app/ui/fonts";
 import React from "react";
 
 const movies = [
@@ -18,13 +19,14 @@ const projects = [
 export default function Page() {
   return (
     <div className="bg-black text-white min-h-screen">
-      {/* Hero Section */}
-      <div className="relative h-[70vh] flex flex-col items-center justify-center text-center bg-cover bg-center px-6 sm:px-12" style={{ backgroundImage: "url('https://source.unsplash.com/random/1600x900/?movie')" }}>
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="relative z-10 max-w-2xl">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Unlimited movies, TV shows, and more</h1>
-          <p className="text-lg sm:text-xl mb-6">Watch anywhere. Cancel anytime.</p>
-          <button className="bg-red-600 hover:bg-red-700 text-white text-lg px-6 py-3 rounded font-bold">Get Started</button>
+      {/* Hero Section with GIF and Movie Bio */}
+      <div className="relative h-[70vh] flex flex-col sm:flex-row items-center text-center sm:text-left bg-black px-6 sm:px-12">
+        <div className="max-w-xl">
+          <h1 className={`${bebas_nue.className} text-4xl sm:text-5xl font-bold mb-4 text-red-600`}>Amaan Mohammed</h1>
+          <p className="text-lg sm:text-xl mb-6 text-gray-300">Dive into an epic adventure with breathtaking visuals and an engaging storyline that will keep you on the edge of your seat.</p>
+        </div>
+        <div className="mt-6 sm:mt-0 sm:ml-12">
+          <video src="/powerlift.mp4.mov" autoPlay loop muted playsInline className="w-full sm:w-96 rounded-lg shadow-lg" />
         </div>
       </div>
       
