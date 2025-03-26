@@ -26,7 +26,8 @@ export default function Page() {
           <p className="text-lg sm:text-xl mb-6 text-gray-300">Dive into an epic adventure with breathtaking visuals and an engaging storyline that will keep you on the edge of your seat.</p>
         </div>
         <div className="mt-6 sm:mt-0 sm:ml-12">
-          <video src="/powerlift.mp4.mov" autoPlay loop muted playsInline className="w-full sm:w-96 rounded-lg shadow-lg" />
+          {/* <video src="/powerlift.mp4.mov" autoPlay loop muted playsInline className="w-full sm:w-96 rounded-lg shadow-lg" /> */}
+          <img src="/powerlift.jpg" className="w-full sm:w-96 rounded-lg shadow-lg"></img>
         </div>
       </div>
       
