@@ -20,15 +20,13 @@ const AccountsPage: React.FC = () => {
           <div key={profile.id} className="flex flex-col items-center group">
             {/* Profile Image */}
             <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-lg overflow-hidden border-2 border-transparent group-hover:border-gray-400 transition">
-              <img
-                src={profile.image}
-                alt={profile.name}
-                className="w-full h-full object-cover"
-              />
-              {/* Edit Icon on Hover */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-50 transition">
-                {/* <FaPen className="text-white text-xl" /> */}
-              </div>
+              <Link href="/home/dev-home">
+                <img
+                  src={profile.image}
+                  alt={profile.name}
+                  className="w-full h-full object-cover"
+                />
+              </Link>
             </div>
             {/* Profile Name */}
             <p className="mt-3 text-lg font-medium group-hover:text-gray-400 transition">
@@ -40,14 +38,6 @@ const AccountsPage: React.FC = () => {
 
       {/* Account & Sign Out Options */}
       <div className="mt-10 space-y-4">
-        {/* <button className="flex items-center gap-2 text-gray-400 hover:text-white transition">
-          <FaPen /> Manage Profiles
-        </button> */}
-        {/* <button 
-            className="flex items-center gap-2 text-gray-400 hover:text-white transition"
-        >
-          <FaSignOutAlt /> Sign Out
-        </button> */}
         <Link
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
             href="/"
