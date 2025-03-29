@@ -1,5 +1,7 @@
 import { bebas_nue } from "@/app/ui/fonts";
 import React from "react";
+import Link from "next/link";
+import { Info } from "lucide-react";
 
 const movies = [
   { id: 1, title: "Resume", image: "/resumeIcon.png" },
@@ -44,6 +46,25 @@ export default function Page() {
             <p className="text-lg sm:text-xl mb-6 text-gray-300">
               I am a new powerlifter that finds joy in solving difficult problems. I practice software development with the same principles of lifting, even though you start with an empty bar which can be embarrasing, every one starts somewhere. This is where consistency is key, you add weight week by week and before you know it you're a decent powerlifter.
             </p>
+            <div className="flex mt-10 space-x-4">
+              <Link
+                  className="rounded border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
+                  href="https://drive.google.com/file/d/1HKW7CuesgZLSDH7EjLMfNcnMVmD3_GT1/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Resume
+                </Link>
+                <Link
+                  className="rounded border border-solid border-transparent transition-colors flex items-center justify-center bg-gray-600 text-foreground gap-2 hover:bg-[#111] dark:hover:bg-[#111] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
+                  href="https://www.linkedin.com/in/amnmohd/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Info className="text-lg" />
+                  LinkedIn
+                </Link>
+            </div>
           </div>
       </div>
       
