@@ -20,14 +20,14 @@ export default function Page() {
   return (
     <div className="bg-black text-white min-h-screen">
       {/* Hero Section with GIF and Movie Bio */}
-      <div className="relative h-[70vh] flex flex-col sm:flex-row items-center text-center sm:text-left bg-black px-6 sm:px-12">
-        <div className="max-w-xl">
-          <h1 className={`${bebas_nue.className} text-4xl sm:text-5xl font-bold mb-4 text-red-600`}>Amaan Mohammed</h1>
-          <p className="text-lg sm:text-xl mb-6 text-gray-300">Dive into an epic adventure with breathtaking visuals and an engaging storyline that will keep you on the edge of your seat.</p>
-        </div>
+      <div className="relative h-[70vh] flex flex-col items-center text-center sm:text-left bg-black px-6 sm:px-12">
         <div className="mt-6 sm:mt-0 sm:ml-12">
           {/* <video src="/powerlift.mp4.mov" autoPlay loop muted playsInline className="w-full sm:w-96 rounded-lg shadow-lg" /> */}
           <img src="/powerlift.jpg" className="w-full sm:w-96 rounded-lg shadow-lg"></img>
+        </div>
+        <div className="max-w-xl">
+          <h1 className={`${bebas_nue.className} text-4xl sm:text-5xl font-bold mb-4 text-red-600`}>Amaan Mohammed</h1>
+          <p className="text-lg sm:text-xl mb-6 text-gray-300">Dive into an epic adventure with breathtaking visuals and an engaging storyline that will keep you on the edge of your seat.</p>
         </div>
       </div>
       
