@@ -20,9 +20,9 @@ export default function Page() {
   return (
     <div className="bg-black text-white min-h-screen">
       {/* Hero Section with GIF and Movie Bio */}
-      <div className="relative w-full h-[70vh] bg-black flex items-center justify-center text-center sm:text-left">
-          {/* Video Container (Now Full-Width) */}
-          <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+      <div className="relative w-full h-[75vh] bg-black flex flex-col items-center justify-center text-center sm:text-left">
+          {/* Video Container */}
+          <div className="relative w-full h-full overflow-hidden">
             <video 
               src="/powerlift.mov" 
               autoPlay 
@@ -36,13 +36,13 @@ export default function Page() {
             <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
           </div>
 
-          {/* Text Section (Centered Above Video) */}
-          <div className="absolute bottom-8 left-8 z-10 max-w-3xl px-6 sm:px-12 text-white">
+          {/* Text Section */}
+          <div className="w-full max-w-3xl px-6 text-center sm:text-left mt-6">
             <h1 className={`${bebas_nue.className} text-4xl sm:text-5xl font-bold mb-4 text-red-600`}>
               Amaan Mohammed
             </h1>
             <p className="text-lg sm:text-xl mb-6 text-gray-300">
-              Dive into an epic adventure with breathtaking visuals and an engaging storyline that will keep you on the edge of your seat.
+              I am a new powerlifter that finds joy in solving difficult problems. I practice software development with the same principles of lifting, even though you start with an empty bar which can be embarrasing, every one starts somewhere. This is where consistency is key, you add weight week by week and before you know it you're a decent powerlifter.
             </p>
           </div>
       </div>
