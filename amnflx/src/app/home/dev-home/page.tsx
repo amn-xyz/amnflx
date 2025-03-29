@@ -21,9 +21,11 @@ export default function Page() {
     <div className="bg-black text-white min-h-screen">
       {/* Hero Section with GIF and Movie Bio */}
       <div className="relative h-[70vh] flex flex-col items-center text-center sm:text-left bg-black px-6 sm:px-12">
-        <div className="mt-6 sm:mt-0 sm:ml-12">
-          {/* <video src="/powerlift.mp4.mov" autoPlay loop muted playsInline className="w-full sm:w-96 rounded-lg shadow-lg" /> */}
-          <img src="/powerlift.jpg" className="w-full sm:w-96 rounded-lg shadow-lg"></img>
+        <div className="relative w-full max-w-md mx-auto">
+          <video src="/powerlift.mov" autoPlay loop muted playsInline className="w-full h-full object-cover" />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
+          {/* <img src="/powerlift.jpg" className="w-full h-auto object-cover mask-image-[linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)]"></img> */}
         </div>
         <div className="max-w-xl">
           <h1 className={`${bebas_nue.className} text-4xl sm:text-5xl font-bold mb-4 text-red-600`}>Amaan Mohammed</h1>
