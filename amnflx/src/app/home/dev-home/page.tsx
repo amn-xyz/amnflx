@@ -21,19 +21,20 @@ const projects = [
   { id: 5, title: "Movie 5", image: "https://via.placeholder.com/300x450" },
 ];
 export default function Page() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef1 = useRef<HTMLDivElement>(null);
+  const scrollContainerRef2 = useRef<HTMLDivElement>(null);
 
   // Function to handle scrolling to the left
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -200, behavior: "smooth" });
+  const scrollLeft = (scrollRef: React.RefObject<HTMLDivElement | null>) => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -200, behavior: "smooth" });
     }
   };
 
   // Function to handle scrolling to the right
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 200, behavior: "smooth" });
+  const scrollRight = (scrollRef: React.RefObject<HTMLDivElement | null>) => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 200, behavior: "smooth" });
     }
   };
   return (
@@ -88,7 +89,7 @@ export default function Page() {
       {/* Projects Section */}
       <div className="px-4 sm:px-6 py-12 relative">
         <h2 className="text-2xl sm:text-3xl font-bold mb-6">Top Projects</h2>
-        <div className="flex overflow-x-auto gap-4 scrollbar-hide px-12" ref={scrollContainerRef}>
+        <div className="flex overflow-x-auto gap-4 scrollbar-hide px-12" ref={scrollContainerRef1}>
           {movies.map((movie) => (
             <div key={movie.id} className="flex-shrink-0 w-48 rounded overflow-hidden">
               <img src={movie.image} alt={movie.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" />
@@ -97,7 +98,7 @@ export default function Page() {
         </div>
         {/* Left Scroll Button */}
         <button
-          onClick={scrollLeft}
+          onClick={() => scrollLeft(scrollContainerRef1)}
           className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-950 text-white py-2 px-4 rounded hover:bg-gray-700"
         >
           {"<"}
@@ -105,7 +106,7 @@ export default function Page() {
 
         {/* Right Scroll Button */}
         <button
-          onClick={scrollRight}
+          onClick={() => scrollRight(scrollContainerRef1)}
           className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-950 text-white py-2 px-4 rounded hover:bg-gray-700"
         >
           {">"}
@@ -115,7 +116,7 @@ export default function Page() {
       {/* Skills section */}
       <div className="px-4 sm:px-6 py-12 relative">
         <h2 className="text-2xl sm:text-3xl font-bold mb-6">Trending Technical Skills</h2>
-        <div className="flex overflow-x-auto gap-4 scrollbar-hide px-12" ref={scrollContainerRef}>
+        <div className="flex overflow-x-auto gap-4 scrollbar-hide px-12" ref={scrollContainerRef2}>
           {projects.map((project) => (
             <div key={project.id} className="flex-shrink-0 w-48 rounded overflow-hidden">
               <img src={project.image} alt={project.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" />
@@ -124,7 +125,7 @@ export default function Page() {
         </div>
         {/* Left Scroll Button */}
         <button
-          onClick={scrollLeft}
+          onClick={() => scrollLeft(scrollContainerRef2)}
           className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-950 text-white py-2 px-4 rounded hover:bg-gray-700"
         >
           {"<"}
@@ -132,7 +133,7 @@ export default function Page() {
 
         {/* Right Scroll Button */}
         <button
-          onClick={scrollRight}
+          onClick={() => scrollRight(scrollContainerRef2)}
           className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-950 text-white py-2 px-4 rounded hover:bg-gray-700"
         >
           {">"}
