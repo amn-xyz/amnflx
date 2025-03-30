@@ -1,5 +1,7 @@
+'use client'
+
 import { bebas_nue } from "@/app/ui/fonts";
-import React from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
 import { Info } from "lucide-react";
 
@@ -19,6 +21,21 @@ const projects = [
   { id: 5, title: "Movie 5", image: "https://via.placeholder.com/300x450" },
 ];
 export default function Page() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  // Function to handle scrolling to the left
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -200, behavior: "smooth" });
+    }
+  };
+
+  // Function to handle scrolling to the right
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 200, behavior: "smooth" });
+    }
+  };
   return (
     <div className="bg-black text-white min-h-screen">
       {/* Hero Section with GIF and Movie Bio */}
@@ -68,28 +85,58 @@ export default function Page() {
           </div>
       </div>
       
-      {/* Movies Section */}
-      <div className="px-4 sm:px-6 py-12">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-6">Trending Documents</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+      {/* Projects Section */}
+      <div className="px-4 sm:px-6 py-12 relative">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6">Top Projects</h2>
+        <div className="flex overflow-x-auto gap-4 scrollbar-hide px-12" ref={scrollContainerRef}>
           {movies.map((movie) => (
-            <div key={movie.id} className="rounded overflow-hidden">
+            <div key={movie.id} className="flex-shrink-0 w-48 rounded overflow-hidden">
               <img src={movie.image} alt={movie.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" />
             </div>
           ))}
         </div>
+        {/* Left Scroll Button */}
+        <button
+          onClick={scrollLeft}
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-950 text-white py-2 px-4 rounded hover:bg-gray-700"
+        >
+          {"<"}
+        </button>
+
+        {/* Right Scroll Button */}
+        <button
+          onClick={scrollRight}
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-950 text-white py-2 px-4 rounded hover:bg-gray-700"
+        >
+          {">"}
+        </button>
       </div>
 
-      {/* Projects section */}
-      <div className="px-4 sm:px-6 py-12">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-6">Top Projects</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-          {projects.map((projects) => (
-            <div key={projects.id} className="rounded overflow-hidden">
-              <img src={projects.image} alt={projects.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" />
+      {/* Skills section */}
+      <div className="px-4 sm:px-6 py-12 relative">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6">Trending Technical Skills</h2>
+        <div className="flex overflow-x-auto gap-4 scrollbar-hide px-12" ref={scrollContainerRef}>
+          {projects.map((project) => (
+            <div key={project.id} className="flex-shrink-0 w-48 rounded overflow-hidden">
+              <img src={project.image} alt={project.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" />
             </div>
           ))}
         </div>
+        {/* Left Scroll Button */}
+        <button
+          onClick={scrollLeft}
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-950 text-white py-2 px-4 rounded hover:bg-gray-700"
+        >
+          {"<"}
+        </button>
+
+        {/* Right Scroll Button */}
+        <button
+          onClick={scrollRight}
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-950 text-white py-2 px-4 rounded hover:bg-gray-700"
+        >
+          {">"}
+        </button>
       </div>
     </div>
   );
