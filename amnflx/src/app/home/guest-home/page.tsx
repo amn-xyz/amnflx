@@ -43,7 +43,7 @@ export default function Page() {
           {/* Video Container */}
           <div className="relative w-full h-full overflow-hidden">
             <video 
-              src="/powerlift.mov"
+              src="/office.mp4"
               autoPlay 
               loop 
               muted 
