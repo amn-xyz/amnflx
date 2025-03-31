@@ -10,15 +10,14 @@ const projects = [
   { id: 2, title: "project 2", image: "/qrgo.webp" },
   { id: 3, title: "project 3", image: "/marquee.png" },
   { id: 4, title: "project 4", image: "/AMNFLX.png" },
-  { id: 5, title: "project 5", image: "https://via.placeholder.com/300x450" },
 ];
 
 const skills = [
-  { id: 1, title: "BHAS", image: "/bhasLogo.png" },
-  { id: 2, title: "skill 2", image: "https://via.placeholder.com/300x450" },
-  { id: 3, title: "skill 3", image: "https://via.placeholder.com/300x450" },
-  { id: 4, title: "skill 4", image: "https://via.placeholder.com/300x450" },
-  { id: 5, title: "skill 5", image: "https://via.placeholder.com/300x450" },
+  { id: 1, title: "BHAS", image: "/reactLogo.png" },
+  { id: 2, title: "skill 2", image: "/nodejsLogo.png" },
+  { id: 3, title: "skill 3", image: "/nextjsLogo.png" },
+  { id: 4, title: "skill 4", image: "/pyLogo.png" },
+  { id: 5, title: "skill 5", image: "/sqlLogo.png" },
 ];
 export default function Page() {
   const scrollContainerRef1 = useRef<HTMLDivElement>(null);
