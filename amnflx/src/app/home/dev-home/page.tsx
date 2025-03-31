@@ -5,20 +5,19 @@ import React, { useRef } from "react";
 import Link from "next/link";
 import { Info } from "lucide-react";
 
-const movies = [
-  { id: 1, title: "Resume", image: "/resumeIcon.png" },
-  { id: 2, title: "Movie 2", image: "https://via.placeholder.com/300x450" },
-  { id: 3, title: "Movie 3", image: "https://via.placeholder.com/300x450" },
-  { id: 4, title: "Movie 4", image: "https://via.placeholder.com/300x450" },
-  { id: 5, title: "Movie 5", image: "https://via.placeholder.com/300x450" },
+const projects = [
+  { id: 1, title: "Resume", image: "/bhasLogo.png" },
+  { id: 2, title: "project 2", image: "/qrgo.webp" },
+  { id: 3, title: "project 3", image: "/marquee.png" },
+  { id: 4, title: "project 4", image: "/AMNFLX.png" },
 ];
 
-const projects = [
-  { id: 1, title: "BHAS", image: "/bhasLogo.png" },
-  { id: 2, title: "Movie 2", image: "https://via.placeholder.com/300x450" },
-  { id: 3, title: "Movie 3", image: "https://via.placeholder.com/300x450" },
-  { id: 4, title: "Movie 4", image: "https://via.placeholder.com/300x450" },
-  { id: 5, title: "Movie 5", image: "https://via.placeholder.com/300x450" },
+const skills = [
+  { id: 1, title: "BHAS", image: "/reactLogo.png" },
+  { id: 2, title: "skill 2", image: "/nodejsLogo.png" },
+  { id: 3, title: "skill 3", image: "/nextjsLogo.png" },
+  { id: 4, title: "skill 4", image: "/pyLogo.png" },
+  { id: 5, title: "skill 5", image: "/sqlLogo.png" },
 ];
 export default function Page() {
   const scrollContainerRef1 = useRef<HTMLDivElement>(null);
@@ -39,12 +38,12 @@ export default function Page() {
   };
   return (
     <div className="bg-black text-white min-h-screen">
-      {/* Hero Section with GIF and Movie Bio */}
+      {/* Hero Section with GIF and project Bio */}
       <div className="relative w-full h-[75vh] bg-black flex flex-col items-center justify-center text-center sm:text-left">
           {/* Video Container */}
           <div className="relative w-full h-full overflow-hidden">
             <video 
-              src="/powerlift.mov" 
+              src="/powerlift.mov"
               autoPlay 
               loop 
               muted 
@@ -87,12 +86,12 @@ export default function Page() {
       </div>
       
       {/* Projects Section */}
-      <div className="px-4 sm:px-6 py-12 relative">
+      <div className="px-4 sm:px-6 pt-12 relative">
         <h2 className="text-2xl sm:text-3xl font-bold mb-6">Top Projects</h2>
         <div className="flex overflow-x-auto gap-4 scrollbar-hide px-12" ref={scrollContainerRef1}>
-          {movies.map((movie) => (
-            <div key={movie.id} className="flex-shrink-0 w-48 rounded overflow-hidden">
-              <img src={movie.image} alt={movie.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" />
+          {projects.map((project) => (
+            <div key={project.id} className="flex-shrink-0 w-48 rounded overflow-hidden">
+              <img src={project.image} alt={project.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" width={300} height={300}/>
             </div>
           ))}
         </div>
@@ -117,9 +116,9 @@ export default function Page() {
       <div className="px-4 sm:px-6 py-12 relative">
         <h2 className="text-2xl sm:text-3xl font-bold mb-6">Trending Technical Skills</h2>
         <div className="flex overflow-x-auto gap-4 scrollbar-hide px-12" ref={scrollContainerRef2}>
-          {projects.map((project) => (
-            <div key={project.id} className="flex-shrink-0 w-48 rounded overflow-hidden">
-              <img src={project.image} alt={project.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" />
+          {skills.map((skill) => (
+            <div key={skill.id} className="flex-shrink-0 w-48 rounded overflow-hidden">
+              <img src={skill.image} alt={skill.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" width={300} height={450}/>
             </div>
           ))}
         </div>
