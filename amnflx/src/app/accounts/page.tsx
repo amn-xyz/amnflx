@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 
 const profiles = [
-  { id: 1, name: "Software Recruiter", image: "/profile1.png" },
-  { id: 2, name: "Data Science Recruiter", image: "/profile2.png" },
-  { id: 3, name: "Powerlifter", image: "/profile3.png" },
-  { id: 4, name: "Guest", image: "/profile4.png" },
+  { id: 1, name: "Software Recruiter", image: "/profile1.png" , link: "/home/dev-home"},
+  { id: 2, name: "Data Science Recruiter", image: "/profile2.png" , link: "/home/ds-home"},
+  { id: 3, name: "Powerlifter", image: "/profile3.png", link: "/home/power-home" },
+  { id: 4, name: "Guest", image: "/profile4.png", link: "/home/guest-home" },
 ];
 
 const AccountsPage: React.FC = () => {
@@ -20,7 +20,7 @@ const AccountsPage: React.FC = () => {
           <div key={profile.id} className="flex flex-col items-center group">
             {/* Profile Image */}
             <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-lg overflow-hidden border-2 border-transparent group-hover:border-gray-400 transition">
-              <Link href="/home/dev-home">
+              <Link href={profile.link}>
                 <img
                   src={profile.image}
                   alt={profile.name}

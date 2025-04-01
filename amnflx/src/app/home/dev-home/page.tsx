@@ -43,7 +43,7 @@ export default function Page() {
           {/* Video Container */}
           <div className="relative w-full h-full overflow-hidden">
             <video 
-              src="/powerlift.mov"
+              src="/coding.mp4"
               autoPlay 
               loop 
               muted 
@@ -61,7 +61,7 @@ export default function Page() {
               Amaan Mohammed
             </h1>
             <p className="text-lg sm:text-xl mb-6 text-gray-300">
-              I am a new powerlifter that finds joy in solving difficult problems. I practice software development with the same principles of lifting, even though you start with an empty bar which can be embarrasing, every one starts somewhere. This is where consistency is key, you add weight week by week and before you know it you're a decent powerlifter.
+              Watch as Amaan, a new grad software developer that is torn apart by difficult problems everyday only to enjoy figuring out how to learn from it and (maybe) solve them, tries to build this portfolio website for fun, to learn next.js 
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               <Link
