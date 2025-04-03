@@ -52,7 +52,7 @@ export default function Page() {
             />
             
             {/* Gradient Fade at Bottom */}
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
           </div>
 
           {/* Text Section */}
