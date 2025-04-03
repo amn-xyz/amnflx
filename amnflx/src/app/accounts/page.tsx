@@ -10,7 +10,7 @@ const profiles = [
 
 const AccountsPage: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-8">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-background text-white p-8">
       {/* Title */}
       <h1 className="flex text-5xl sm:text-4xl font-bold mb-8">Who's Watching?</h1>
 

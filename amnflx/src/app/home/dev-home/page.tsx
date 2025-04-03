@@ -37,9 +37,9 @@ export default function Page() {
     }
   };
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-background text-white min-h-screen">
       {/* Hero Section with GIF and project Bio */}
-      <div className="relative w-full h-[75vh] bg-black flex flex-col items-center justify-center text-center sm:text-left">
+      <div className="relative w-full h-[75vh] bg-background flex flex-col justify-center text-center sm:text-left">
           {/* Video Container */}
           <div className="relative w-full h-full overflow-hidden">
             <video 
@@ -52,7 +52,7 @@ export default function Page() {
             />
             
             {/* Gradient Fade at Bottom */}
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
           </div>
 
           {/* Text Section */}
@@ -91,7 +91,7 @@ export default function Page() {
         <div className="flex overflow-x-auto gap-4 scrollbar-hide px-12" ref={scrollContainerRef1}>
           {projects.map((project) => (
             <div key={project.id} className="flex-shrink-0 w-48 rounded overflow-hidden">
-              <img src={project.image} alt={project.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" width={300} height={300}/>
+              <img src={project.image} alt={project.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" width={450} height={300}/>
             </div>
           ))}
         </div>

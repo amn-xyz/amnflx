@@ -9,9 +9,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-background text-white min-h-screen">
       {/* Top Bar */}
-      <header className="bg-black px-6 py-4 flex justify-between items-center">
+      <header className="bg-background px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <h1 className={`${bebas_nue.className} text-4xl font-bold text-red-600`}>AMNFLX</h1>
         
