@@ -6,11 +6,11 @@ import Link from "next/link";
 import { Info } from "lucide-react";
 
 const projects = [
-  { id: 1, title: "Experiences", image: "/experiences" },
-  { id: 2, title: "Projects", image: "/projects.png" },
-  { id: 3, title: "Education", image: "/education.jpg" },
-  { id: 4, title: "Volunteering", image: "/volunteering.jpg" },
-  { id: 5, title: "Hobbies", image: "/hobbies.jpg" },
+  { id: 1, title: "Experiences", image: "/experiences", link: "/home/projects" },
+  { id: 2, title: "Projects", image: "/projects.png", link: "/home/projects" },
+  { id: 3, title: "Education", image: "/education.jpg", link: "/home/projects" },
+  { id: 4, title: "Volunteering", image: "/volunteering.jpg", link: "/home/projects" },
+  { id: 5, title: "Hobbies", image: "/hobbies.jpg", link: "/home/projects" },
 ];
 
 const skills = [
@@ -93,7 +93,7 @@ export default function Page() {
         {projects.map((project) => (
           <div key={project.id} className="flex-shrink-0 w-110 relative rounded overflow-hidden">
             {/* Link wrapping the entire div for clickability */}
-            <Link href="/" className="block relative w-full h-full">
+            <Link href={project.link} className="block relative w-full h-full">
               {/* Background Image */}
               <img src={project.image} alt={project.title} className="w-full h-auto rounded-lg transition duration-300" width={640} height={360} />
 
