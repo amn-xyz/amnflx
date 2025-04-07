@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaHome, FaTv, FaFilm, FaSearch, FaBars, FaTimes } from "react-icons/fa";
+import { FaHome, FaTv, FaFilm, FaUserCircle, FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import { bebas_nue } from "@/app/ui/fonts";
 
@@ -17,17 +17,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         
         {/* Navigation (Hidden on Small Screens) */}
         <nav className="hidden sm:flex space-x-6">
-          <Link href="/" className="text-lg hover:text-red-500 flex items-center gap-2">
+          {/* <Link href="/" className="text-lg hover:text-red-500 flex items-center gap-2">
             <FaHome /> Home
+          </Link> */}
+          <Link href="/home/experiences" className="text-lg hover:text-red-500 flex items-center gap-2">
+            <FaTv /> Experience
           </Link>
-          <Link href="/tv-shows" className="text-lg hover:text-red-500 flex items-center gap-2">
-            <FaTv /> TV Shows
+          <Link href="/home/projects" className="text-lg hover:text-red-500 flex items-center gap-2">
+            <FaFilm /> Projects
           </Link>
-          <Link href="/movies" className="text-lg hover:text-red-500 flex items-center gap-2">
-            <FaFilm /> Movies
-          </Link>
-          <Link href="/search" className="text-lg hover:text-red-500 flex items-center gap-2">
-            <FaSearch /> Search
+          <Link href="/accounts" className="text-lg hover:text-red-500 flex items-center gap-2">
+            <FaUserCircle /> Switch User
           </Link>
         </nav>
         
@@ -39,18 +39,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="sm:hidden bg-gray-800 p-4 flex flex-col space-y-4">
-          <Link href="/" className="text-lg hover:text-red-500 flex items-center gap-2">
+        <div className="sm:hidden bg-neutral-800 p-4 flex flex-col space-y-4">
+          {/* <Link href="/" className="text-lg hover:text-red-500 flex items-center gap-2">
             <FaHome /> Home
+          </Link> */}
+          <Link href="/home/experiences" className="text-lg hover:text-red-500 flex items-center gap-2">
+            <FaTv /> Experience
           </Link>
-          <Link href="/tv-shows" className="text-lg hover:text-red-500 flex items-center gap-2">
-            <FaTv /> TV Shows
+          <Link href="/home/projects" className="text-lg hover:text-red-500 flex items-center gap-2">
+            <FaFilm /> Projects
           </Link>
-          <Link href="/movies" className="text-lg hover:text-red-500 flex items-center gap-2">
-            <FaFilm /> Movies
-          </Link>
-          <Link href="/search" className="text-lg hover:text-red-500 flex items-center gap-2">
-            <FaSearch /> Search
+          <Link href="/accounts" className="text-lg hover:text-red-500 flex items-center gap-2">
+            <FaUserCircle /> Switch User
           </Link>
         </div>
       )}
