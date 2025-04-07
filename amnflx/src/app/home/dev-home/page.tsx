@@ -6,11 +6,11 @@ import Link from "next/link";
 import { Info } from "lucide-react";
 
 const projects = [
-  { id: 1, title: "Experiences", image: "/experiences", link: "/home/projects" },
+  { id: 1, title: "Experiences", image: "/experiences", link: "/home/experiences" },
   { id: 2, title: "Projects", image: "/projects.png", link: "/home/projects" },
-  { id: 3, title: "Education", image: "/education.jpg", link: "/home/projects" },
-  { id: 4, title: "Volunteering", image: "/volunteering.jpg", link: "/home/projects" },
-  { id: 5, title: "Hobbies", image: "/hobbies.jpg", link: "/home/projects" },
+  { id: 3, title: "Education", image: "/education.jpg", link: "/home/education" },
+  { id: 4, title: "Volunteering", image: "/volunteering.jpg", link: "/home/volunteering" },
+  { id: 5, title: "Hobbies", image: "/hobbies.jpg", link: "/home/hobbies" },
 ];
 
 const skills = [
