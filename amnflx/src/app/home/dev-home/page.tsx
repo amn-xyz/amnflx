@@ -17,7 +17,7 @@ const skills = [
   { id: 1, title: "BHAS", image: "/reactLogo.png" },
   { id: 2, title: "skill 2", image: "/nodejsLogo.png" },
   { id: 3, title: "skill 3", image: "/nextjsLogo.png" },
-  { id: 4, title: "skill 4", image: "/pyLogo.png" },
+  { id: 4, title: "skill 4", image: "/pythonLogo.png" },
   { id: 5, title: "skill 5", image: "/sqlLogo.png" },
 ];
 export default function Page() {
@@ -74,7 +74,7 @@ export default function Page() {
                   Resume
                 </Link>
                 <Link
-                  className="rounded border border-solid border-transparent transition-colors flex items-center justify-center bg-gray-600 text-foreground gap-2 hover:bg-[#111] dark:hover:bg-[#111] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
+                  className="rounded border border-solid border-transparent transition-colors flex items-center justify-center bg-neutral-600 text-foreground gap-2 hover:bg-[#111] dark:hover:bg-[#111] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
                   href="https://www.linkedin.com/in/amnmohd/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -91,7 +91,7 @@ export default function Page() {
         <h2 className="text-2xl sm:text-3xl font-bold mb-6">Popular Shows</h2>
         <div className="flex overflow-x-auto gap-4 scrollbar-hide px-12" ref={scrollContainerRef1}>
         {categories.map((category) => (
-          <div key={category.id} className="flex-shrink-0 w-110 relative rounded overflow-hidden">
+          <div key={category.id} className="flex-shrink-0 w-100 relative rounded overflow-hidden">
             {/* Link wrapping the entire div for clickability */}
             <Link href={category.link} className="block relative w-full h-full">
               {/* Background Image */}
@@ -130,8 +130,8 @@ export default function Page() {
         <h2 className="text-2xl sm:text-3xl font-bold mb-6">Trending Technical Skills</h2>
         <div className="flex overflow-x-auto gap-4 scrollbar-hide px-12" ref={scrollContainerRef2}>
           {skills.map((skill) => (
-            <div key={skill.id} className="flex-shrink-0 w-48 rounded overflow-hidden">
-              <img src={skill.image} alt={skill.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" width={300} height={450}/>
+            <div key={skill.id} className="flex-shrink-0 w-100 rounded overflow-hidden">
+              <img src={skill.image} alt={skill.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" width={640} height={360}/>
             </div>
           ))}
         </div>
