@@ -5,7 +5,7 @@ import React, { useRef } from "react";
 import Link from "next/link";
 import { Info } from "lucide-react";
 
-const projects = [
+const categories = [
   { id: 1, title: "Experiences", image: "/experiences", link: "/home/experiences" },
   { id: 2, title: "Projects", image: "/projects.png", link: "/home/projects" },
   { id: 3, title: "Education", image: "/education.jpg", link: "/home/education" },
@@ -86,23 +86,23 @@ export default function Page() {
           </div>
       </div>
       
-      {/* Projects Section */}
+      {/* Categories Section */}
       <div className="px-4 sm:px-6 pt-12 relative">
         <h2 className="text-2xl sm:text-3xl font-bold mb-6">Popular Shows</h2>
         <div className="flex overflow-x-auto gap-4 scrollbar-hide px-12" ref={scrollContainerRef1}>
-        {projects.map((project) => (
-          <div key={project.id} className="flex-shrink-0 w-110 relative rounded overflow-hidden">
+        {categories.map((category) => (
+          <div key={category.id} className="flex-shrink-0 w-110 relative rounded overflow-hidden">
             {/* Link wrapping the entire div for clickability */}
-            <Link href={project.link} className="block relative w-full h-full">
+            <Link href={category.link} className="block relative w-full h-full">
               {/* Background Image */}
-              <img src={project.image} alt={project.title} className="w-full h-auto rounded-lg transition duration-300" width={640} height={360} />
+              <img src={category.image} alt={category.title} className="w-full h-auto rounded-lg transition duration-300" width={640} height={360} />
 
               {/* Dark Overlay */}
               <div className="absolute inset-0 bg-opacity-40 transition-opacity duration-300 hover:bg-opacity-30 z-10"></div>
 
               {/* Text Content */}
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 z-20 drop-shadow-[0_1.2px_1.2px_rgba(1,1,1,100)]">
-                <h2 className="text-4xl font-bold">{project.title}</h2>
+                <h2 className="text-4xl font-bold">{category.title}</h2>
               </div>
             </Link>
           </div>
