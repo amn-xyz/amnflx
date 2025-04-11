@@ -11,11 +11,10 @@ type Project = {
   }
 
 const projects: Project[] = [
-    { id: 1, title: "Experiences", image: "/experiences", description:"desc 1" },
-    { id: 2, title: "Projects", image: "/projects.png", description:"desc 2" },
-    { id: 3, title: "Education", image: "/education.jpg", description:"desc 3" },
-    { id: 4, title: "Volunteering", image: "/volunteering.jpg", description:"desc 4" },
-    { id: 5, title: "Hobbies", image: "/hobbies.jpg", description:"desc 5" },
+    { id: 1, title: "Volunteer Management App", image: "/bhasLogo.png", description:"desc 1" },
+    { id: 2, title: "qrGO", image: "/qrgo.png", description:"desc 2" },
+    { id: 3, title: "StudyBuddy", image: "/studyBuddy.png", description:"desc 3" },
+    { id: 4, title: "AMNFLX", image: "/amnflxLogo.png", description:"desc 4" },
   ];
 
 export default function Page() {
@@ -41,7 +40,7 @@ export default function Page() {
 
             {/* Pop-up Card */}
             {selectedProject && (
-                <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50" onClick={() => setSelectedProject(null)}>
+                <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50" onClick={() => setSelectedProject(null)}>
                 <div className="bg-background text-foreground p-6 rounded-lg max-w-md w-full relative shadow-[0_8px_30px_rgba(220,38,38,1)]">
                     
                     <button 
