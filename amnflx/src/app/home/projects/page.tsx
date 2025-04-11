@@ -8,13 +8,14 @@ type Project = {
     title: string
     image: string
     description: string
+    video: string
   }
 
 const projects: Project[] = [
-    { id: 1, title: "Volunteer Management App", image: "/bhasLogo.png", description:"desc 1" },
-    { id: 2, title: "qrGO", image: "/qrgo.png", description:"desc 2" },
-    { id: 3, title: "StudyBuddy", image: "/studyBuddy.png", description:"desc 3" },
-    { id: 4, title: "AMNFLX", image: "/amnflxLogo.png", description:"desc 4" },
+    { id: 1, title: "Volunteer Management App", image: "/bhasLogo.png", description:"desc 1", video: "/bhasDemo.mp4" },
+    { id: 2, title: "qrGO", image: "/qrgo.png", description:"desc 2", video: "/bhasDemo" },
+    { id: 3, title: "StudyBuddy", image: "/studyBuddy.png", description:"desc 3", video: "/studyBuddyDemo.mp4" },
+    { id: 4, title: "AMNFLX", image: "/amnflxLogo.png", description:"desc 4", video: "/amnflxDemo.mp4" },
   ];
 
 export default function Page() {
@@ -40,19 +41,37 @@ export default function Page() {
 
             {/* Pop-up Card */}
             {selectedProject && (
-                <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50" onClick={() => setSelectedProject(null)}>
-                <div className="bg-background text-foreground p-6 rounded-lg max-w-md w-full relative shadow-[0_8px_30px_rgba(220,38,38,1)]">
-                    
-                    <button 
-                    onClick={() => setSelectedProject(null)} 
-                    className="absolute top-2 right-2 text-2xl"
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50"
+                    onClick={() => setSelectedProject(null)}
+                >
+                    <div
+                    className="bg-background text-foreground p-6 rounded-lg max-w-3xl w-full relative shadow-[0_8px_30px_rgba(220,38,38,1)]"
+                    onClick={(e) => e.stopPropagation()} // prevents modal from closing when clicking inside
                     >
-                    &times;
+                    <button
+                        onClick={() => setSelectedProject(null)}
+                        className="absolute top-2 right-2 text-2xl"
+                    >
+                        &times;
                     </button>
 
                     <h2 className="text-2xl font-bold mb-4">{selectedProject.title}</h2>
+
+                    {/* Video Section */}
+                    <div className="mb-4 rounded overflow-hidden rounded-lg">
+                        <video
+                        src={selectedProject.video}
+                        autoPlay 
+                        loop 
+                        muted 
+                        playsInline
+                        className="w-full h-auto rounded-lg"
+                        />
+                    </div>
+
                     <p className="text-sm text-muted-foreground">{selectedProject.description}</p>
-                </div>
+                    </div>
                 </div>
             )}
         </div>
