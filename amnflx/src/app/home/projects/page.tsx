@@ -9,13 +9,16 @@ type Project = {
     image: string
     description: string
     video: string
+    repo: string
   }
 
 const projects: Project[] = [
-    { id: 1, title: "Volunteer Management App", image: "/bhasLogo.png", description:"desc 1", video: "/bhasDemo.mp4" },
-    { id: 2, title: "qrGO", image: "/qrgo.png", description:"desc 2", video: "/bhasDemo" },
-    { id: 3, title: "StudyBuddy", image: "/studyBuddy.png", description:"desc 3", video: "/studyBuddyDemo.mp4" },
-    { id: 4, title: "AMNFLX", image: "/amnflxLogo.png", description:"desc 4", video: "/amnflxDemo.mp4" },
+    { id: 1, title: "Volunteer Management App", image: "/bhasLogo.png",
+        description:"This is a volunteer management web application, designed to simplify managing and coordinating volunteers for events. This platform offers a seamless experience for creating events, managing shift schedules, and signing up volunteers and artists.",
+        video: "/bhasDemo.mp4", repo: "https://github.com/UAlberta-CMPUT401/f24project-Bleeding-Heart-Art-Space" },
+    { id: 2, title: "qrGO", image: "/qrgo.png", description:"desc 2", video: "/comingSoon.mp4", repo: "https://github.com/UAlberta-CMPUT401/f24project-Bleeding-Heart-Art-Space" },
+    { id: 3, title: "StudyBuddy", image: "/studyBuddy.png", description:"desc 3", video: "/studyBuddyDemo.mp4", repo: "https://github.com/UAlberta-CMPUT401/f24project-Bleeding-Heart-Art-Space" },
+    { id: 4, title: "AMNFLX", image: "/amnflxLogo.png", description:"desc 4", video: "/amnflxDemo.mp4", repo: "https://github.com/UAlberta-CMPUT401/f24project-Bleeding-Heart-Art-Space" },
   ];
 
 export default function Page() {
@@ -70,7 +73,15 @@ export default function Page() {
                         />
                     </div>
 
-                    <p className="text-sm text-muted-foreground">{selectedProject.description}</p>
+                    <p className="text-xl text-muted-foreground py-5">{selectedProject.description}</p>
+                    <Link
+                        className="rounded border border-solid border-transparent transition-colors flex items-center justify-center bg-neutral-600 text-foreground gap-2 hover:bg-neutral-600 dark:hover:bg-neutral-700 font-bold text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
+                        href="https://www.linkedin.com/in/amnmohd/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >
+                        Visit Repository
+                        </Link>
                     </div>
                 </div>
             )}
