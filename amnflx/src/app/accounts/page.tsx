@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const profiles = [
   { id: 1, name: "Software Recruiter", image: "/profile1.png" , link: "/home/dev-home"},
-  { id: 2, name: "Data Science Recruiter", image: "/profile2.png" , link: "/home/ds-home"},
+  // { id: 2, name: "Data Science Recruiter", image: "/profile2.png" , link: "/home/ds-home"},
   { id: 3, name: "Powerlifter", image: "/profile3.png", link: "/home/power-home" },
   { id: 4, name: "Guest", image: "/profile4.png", link: "/home/guest-home" },
 ];
@@ -15,7 +15,7 @@ const AccountsPage: React.FC = () => {
       <h1 className="flex text-5xl sm:text-4xl font-bold mb-8">Who's Watching?</h1>
 
       {/* Profile Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
         {profiles.map((profile) => (
           <div key={profile.id} className="flex flex-col items-center group">
             {/* Profile Image */}
