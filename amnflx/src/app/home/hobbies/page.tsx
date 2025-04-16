@@ -11,11 +11,24 @@ type Project = {
   }
 
 const projects: Project[] = [
-    { id: 1, title: "Experiences", image: "/experiences", description:"desc 1" },
-    { id: 2, title: "Projects", image: "/projects.png", description:"desc 2" },
-    { id: 3, title: "Education", image: "/education.jpg", description:"desc 3" },
-    { id: 4, title: "Volunteering", image: "/volunteering.jpg", description:"desc 4" },
-    { id: 5, title: "Hobbies", image: "/hobbies.jpg", description:"desc 5" },
+    { 
+        id: 1, 
+        title: "Powerlifting", 
+        image: "/powerlift.png",
+        description:"I started my Powerlifting journey in May 2024, and competed in my first competition in November 2024, securing a total weight of 442.5kg, a summation of my squat, bench, and deadlift.",
+    },
+    { 
+        id: 2, 
+        title: "Soccer", 
+        image: "/soccer.png", 
+        description:"I've played soccer through majority of my childhood. It's been my main sport until powerlifting came into my life. I still play soccer recreationally and won second place in a competitive futsal league due to a funny story (Ask me sometime).",
+    },
+    { 
+        id: 3, 
+        title: "Gaming", 
+        image: "/gaming.png", 
+        description:"I've been a console gamer all my life and recently was blessed with the opportunity of buliding my own PC. I love single player adventure games spanning indie games like Hades to major triple A games like Elden Ring which I'm currently pushing through. ", 
+    },
   ];
 
 export default function Page() {
@@ -41,19 +54,30 @@ export default function Page() {
 
             {/* Pop-up Card */}
             {selectedProject && (
-                <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50" onClick={() => setSelectedProject(null)}>
-                <div className="bg-background text-foreground p-6 rounded-lg max-w-md w-full relative shadow-[0_8px_30px_rgba(220,38,38,1)]">
-                    
-                    <button 
-                    onClick={() => setSelectedProject(null)} 
-                    className="absolute top-2 right-2 text-2xl"
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50"
+                    onClick={() => setSelectedProject(null)}
+                >
+                    <div
+                    className="bg-background text-foreground p-6 rounded-lg max-w-3xl w-full relative shadow-[0_8px_30px_rgba(220,38,38,1)]"
+                    onClick={(e) => e.stopPropagation()} // prevents modal from closing when clicking inside
                     >
-                    &times;
+                    <button
+                        onClick={() => setSelectedProject(null)}
+                        className="absolute top-2 right-2 text-2xl"
+                    >
+                        &times;
                     </button>
 
                     <h2 className="text-2xl font-bold mb-4">{selectedProject.title}</h2>
-                    <p className="text-sm text-muted-foreground">{selectedProject.description}</p>
-                </div>
+
+                    {/* Video Section */}
+                    <div className="mb-4 rounded overflow-hidden rounded-lg px-10">
+                        <img src={selectedProject.image} />
+                    </div>
+
+                    <p className="text-xl text-muted-foreground py-5">{selectedProject.description}</p>
+                    </div>
                 </div>
             )}
         </div>
