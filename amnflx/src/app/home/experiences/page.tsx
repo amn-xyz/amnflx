@@ -57,18 +57,18 @@ export default function Page() {
     <div className="px-4 sm:px-6 py-12">
       <h2 className="text-2xl sm:text-3xl font-bold mb-6">Professional Experience</h2>
 
-      <div className="flex flex-col gap-6 max-w-2xl">
+      <div className="flex flex-col gap-6 max-w-3xl">
         {experiences.map((exp) => (
           <div
             key={exp.id}
             className="bg-neutral-800 rounded-lg p-6 shadow-lg border hover:shadow-red-600 transition duration-300"
           >
-            <h3 className="text-xl font-semibold">{exp.position}</h3>
+            <h3 className="text-2xl font-semibold">{exp.position}</h3>
             <p className="text-red-600 font-medium">{exp.company}</p>
             <p className="text-sm text-gray-500 mb-4">
               {exp.from} — {exp.to}
             </p>
-            <ul className="list-disc list-inside text-sm space-y-1">
+            <ul className="list-disc list-inside text-xl space-y-1">
               {exp.description.map((point, idx) => (
                 <li key={idx}>{point}</li>
               ))}
