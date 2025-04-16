@@ -11,11 +11,24 @@ type Project = {
   }
 
 const projects: Project[] = [
-    { id: 1, title: "Experiences", image: "/experiences", description:"desc 1" },
-    { id: 2, title: "Projects", image: "/projects.png", description:"desc 2" },
-    { id: 3, title: "Education", image: "/education.jpg", description:"desc 3" },
-    { id: 4, title: "Volunteering", image: "/volunteering.jpg", description:"desc 4" },
-    { id: 5, title: "Hobbies", image: "/hobbies.jpg", description:"desc 5" },
+    { 
+        id: 1, 
+        title: "Volunteer Management App", 
+        image: "/bhasLogo.png",
+        description:"After working with Bleeding Heart Art Space to develop the app in my class, I have furthur volunteered to help them deploy it to their main webpage and run some alpha testing within the organization before they launch it.",
+    },
+    { 
+        id: 2, 
+        title: "UACS President", 
+        image: "/uacs.png", 
+        description:"As the President of the Undergraduate Association of Computing Science, I worked to bridge the gap between students and the tech industry, addressing modern challenges. Additionally, I was previously the VP Interal and the VP External before that, securing our club and its activities funding over 3000 CAD.",
+    },
+    { 
+        id: 3, 
+        title: "Dodgeball Liaison", 
+        image: "/AllStars.png", 
+        description:"I was the team captain of my university residence floor’s dodgeball team. As the liaison I acted as the middleman between my team and the executives of the organization, attending biweekly meetings with executives and weekly meetings with my team to update them about rules and help new residents experience the culture of dodgeball in Lister Residence. ", 
+    },
   ];
 
 export default function Page() {
@@ -41,19 +54,30 @@ export default function Page() {
 
             {/* Pop-up Card */}
             {selectedProject && (
-                <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50" onClick={() => setSelectedProject(null)}>
-                <div className="bg-background text-foreground p-6 rounded-lg max-w-md w-full relative shadow-[0_8px_30px_rgba(220,38,38,1)]">
-                    
-                    <button 
-                    onClick={() => setSelectedProject(null)} 
-                    className="absolute top-2 right-2 text-2xl"
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50"
+                    onClick={() => setSelectedProject(null)}
+                >
+                    <div
+                    className="bg-background text-foreground p-6 rounded-lg max-w-3xl w-full relative shadow-[0_8px_30px_rgba(220,38,38,1)]"
+                    onClick={(e) => e.stopPropagation()} // prevents modal from closing when clicking inside
                     >
-                    &times;
+                    <button
+                        onClick={() => setSelectedProject(null)}
+                        className="absolute top-2 right-2 text-2xl"
+                    >
+                        &times;
                     </button>
 
                     <h2 className="text-2xl font-bold mb-4">{selectedProject.title}</h2>
-                    <p className="text-sm text-muted-foreground">{selectedProject.description}</p>
-                </div>
+
+                    {/* Video Section */}
+                    <div className="mb-4 rounded overflow-hidden rounded-lg px-10">
+                        <img src={selectedProject.image} />
+                    </div>
+
+                    <p className="text-xl text-muted-foreground py-5">{selectedProject.description}</p>
+                    </div>
                 </div>
             )}
         </div>

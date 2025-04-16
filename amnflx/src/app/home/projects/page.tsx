@@ -101,7 +101,7 @@ export default function Page() {
                     <p className="text-xl text-muted-foreground py-5">{selectedProject.description}</p>
                     <Link
                         className="rounded border border-solid border-transparent transition-colors flex items-center justify-center bg-neutral-600 text-foreground gap-2 hover:bg-neutral-600 dark:hover:bg-neutral-700 font-bold text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-                        href="https://www.linkedin.com/in/amnmohd/"
+                        href={selectedProject.repo}
                         target="_blank"
                         rel="noopener noreferrer"
                         >
