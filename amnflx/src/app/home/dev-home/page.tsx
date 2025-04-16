@@ -74,7 +74,7 @@ export default function Page() {
                   Resume
                 </Link>
                 <Link
-                  className="rounded border border-solid border-transparent transition-colors flex items-center justify-center bg-neutral-600 text-foreground gap-2 hover:bg-[#111] dark:hover:bg-[#111] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
+                  className="rounded border border-solid border-transparent transition-colors flex items-center justify-center bg-neutral-600 text-foreground gap-2 hover:bg-neutral-600 dark:hover:bg-neutral-700 font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
                   href="https://www.linkedin.com/in/amnmohd/"
                   target="_blank"
                   rel="noopener noreferrer"
