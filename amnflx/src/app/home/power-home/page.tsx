@@ -63,7 +63,7 @@ export default function Page() {
               Amaan Mohammed
             </h1>
             <p className="text-lg sm:text-xl mb-6 text-gray-300">
-            Amaan, a new powerlifter, that finds joy in solving difficult problems. He believes software development follows the same principles of lifting, to start with an embarrasing empty bar, add weight week by week and before you know it you're a decent powerlifter. Can he apply this to sofware development? 
+            Amaan, a new powerlifter, that finds joy in solving difficult problems. He believes software development follows the same principles of lifting, to start with an embarrasing empty bar, add weight week by week and before you know it you&apos;re a decent powerlifter. Can he apply this to sofware development? 
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               <Link

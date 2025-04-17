@@ -62,7 +62,7 @@ export default function Page() {
               Amaan Mohammed
             </h1>
             <p className="text-lg sm:text-xl mb-6 text-gray-300">
-              Data. Clean. Extrapolate. Visualize. Predict. Do something. Find out what Amaan, a new grad, is facing on his journey to become "The Data Scientist."
+              Data. Clean. Extrapolate. Visualize. Predict. Do something. Find out what Amaan, a new grad, is facing on his journey to become &quot;The Data Scientist.&quot;
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               <Link
