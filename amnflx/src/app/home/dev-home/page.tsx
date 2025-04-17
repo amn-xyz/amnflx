@@ -7,7 +7,7 @@ import { Info } from "lucide-react";
 import Image from "next/image";
 
 const categories = [
-  { id: 1, title: "Experiences", image: "/experiences", link: "/home/experiences" },
+  { id: 1, title: "Experiences", image: "/experiences.png", link: "/home/experiences" },
   { id: 2, title: "Projects", image: "/projects.png", link: "/home/projects" },
   { id: 3, title: "Education", image: "/education.jpg", link: "/home/education" },
   { id: 4, title: "Volunteering", image: "/volunteering.jpg", link: "/home/volunteering" },
