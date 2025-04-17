@@ -4,6 +4,7 @@ import { bebas_nue } from "@/app/ui/fonts";
 import React, { useRef } from "react";
 import Link from "next/link";
 import { Info } from "lucide-react";
+import Image from "next/image";
 
 const projects = [
   { id: 1, title: "Resume", image: "/bhasLogo.png" },
@@ -61,7 +62,7 @@ export default function Page() {
               Amaan Mohammed
             </h1>
             <p className="text-lg sm:text-xl mb-6 text-gray-300">
-              Data. Clean. Extrapolate. Visualize. Predict. Do something. Find out what Amaan, a new grad, is facing on his journey to become "The Data Scientist."
+              Data. Clean. Extrapolate. Visualize. Predict. Do something. Find out what Amaan, a new grad, is facing on his journey to become &quot;The Data Scientist.&quot;
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               <Link
@@ -91,7 +92,7 @@ export default function Page() {
         <div className="flex overflow-x-auto gap-4 scrollbar-hide px-12" ref={scrollContainerRef1}>
           {projects.map((project) => (
             <div key={project.id} className="flex-shrink-0 w-48 rounded overflow-hidden">
-              <img src={project.image} alt={project.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" width={300} height={300}/>
+              <Image src={project.image} alt={project.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" width={300} height={300}/>
             </div>
           ))}
         </div>
@@ -118,7 +119,7 @@ export default function Page() {
         <div className="flex overflow-x-auto gap-4 scrollbar-hide px-12" ref={scrollContainerRef2}>
           {skills.map((skill) => (
             <div key={skill.id} className="flex-shrink-0 w-48 rounded overflow-hidden">
-              <img src={skill.image} alt={skill.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" width={300} height={450}/>
+              <Image src={skill.image} alt={skill.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" width={300} height={450}/>
             </div>
           ))}
         </div>

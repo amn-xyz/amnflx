@@ -4,6 +4,7 @@ import { bebas_nue } from "@/app/ui/fonts";
 import React, { useRef } from "react";
 import Link from "next/link";
 import { Info } from "lucide-react";
+import Image from "next/image";
 
 const categories = [
   { id: 1, title: "Experiences", image: "/experiences", link: "/home/experiences" },
@@ -62,7 +63,7 @@ export default function Page() {
               Amaan Mohammed
             </h1>
             <p className="text-lg sm:text-xl mb-6 text-gray-300">
-            Amaan, a new powerlifter, that finds joy in solving difficult problems. He believes software development follows the same principles of lifting, to start with an embarrasing empty bar, add weight week by week and before you know it you're a decent powerlifter. Can he apply this to sofware development? 
+            Amaan, a new powerlifter, that finds joy in solving difficult problems. He believes software development follows the same principles of lifting, to start with an embarrasing empty bar, add weight week by week and before you know it you&apos;re a decent powerlifter. Can he apply this to sofware development? 
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               <Link
@@ -95,7 +96,7 @@ export default function Page() {
             {/* Link wrapping the entire div for clickability */}
             <Link href={category.link} className="block relative w-full h-full">
               {/* Background Image */}
-              <img src={category.image} alt={category.title} className="w-full h-auto rounded-lg transition duration-300" width={640} height={360} />
+              <Image src={category.image} alt={category.title} className="w-full h-auto rounded-lg transition duration-300" width={640} height={360} />
 
               {/* Dark Overlay */}
               <div className="absolute inset-0 bg-opacity-40 transition-opacity duration-300 hover:bg-opacity-30 z-10"></div>
@@ -131,7 +132,7 @@ export default function Page() {
         <div className="flex overflow-x-auto gap-4 scrollbar-hide px-12" ref={scrollContainerRef2}>
           {skills.map((skill) => (
             <div key={skill.id} className="flex-shrink-0 w-100 rounded overflow-hidden">
-              <img src={skill.image} alt={skill.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" width={640} height={360}/>
+              <Image src={skill.image} alt={skill.title} className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300" width={640} height={360}/>
             </div>
           ))}
         </div>

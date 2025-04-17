@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 type Project = {
     id: number
@@ -59,7 +60,7 @@ export default function Page() {
                     onClick={() => setSelectedProject(project)}
                     className="cursor-pointer group relative rounded-lg overflow-hidden bg-background border border-neutral-800 transition-transform duration-300 hover:-translate-y-2"
                 >
-                    <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+                    <Image src={project.image} alt={project.title} className="w-full h-48 object-cover" width={640} height={360} />
                     <div className="p-4">
                     <h3 className="text-lg font-semibold">{project.title}</h3>
                     </div>

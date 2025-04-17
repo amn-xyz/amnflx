@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const profiles = [
   { id: 1, name: "Software Recruiter", image: "/profile1.png" , link: "/home/dev-home"},
@@ -12,7 +13,7 @@ const AccountsPage: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-background text-white p-8">
       {/* Title */}
-      <h1 className="flex text-5xl sm:text-4xl font-bold mb-8">Who's Watching?</h1>
+      <h1 className="flex text-5xl sm:text-4xl font-bold mb-8">Who&apos;s Watching?</h1>
 
       {/* Profile Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
@@ -21,9 +22,11 @@ const AccountsPage: React.FC = () => {
             {/* Profile Image */}
             <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-lg overflow-hidden border-2 border-transparent group-hover:border-gray-400 transition">
               <Link href={profile.link}>
-                <img
+                <Image
                   src={profile.image}
                   alt={profile.name}
+                  width={200}
+                  height={200}
                   className="w-full h-full object-cover"
                 />
               </Link>

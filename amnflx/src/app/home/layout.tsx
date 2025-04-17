@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaHome, FaTv, FaFilm, FaUserCircle, FaBars, FaTimes } from "react-icons/fa";
+import { FaTv, FaFilm, FaUserCircle, FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import { bebas_nue } from "@/app/ui/fonts";
 
